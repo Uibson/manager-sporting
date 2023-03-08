@@ -1,0 +1,52 @@
+
+
+
+
+.logo{
+    color: #3b5cbc;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.color-primary{
+    background-color: #3b5cbc;
+    color: #EEE;
+}
+.font-color{
+    color:#3b5cbc;
+}
+.login {
+    min-height: 100vh;
+  }
+  
+  .bg-image {
+    background-color: #3b5cbc;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-heading {
+    font-weight: 300;
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+  .reverse-padding-main{
+    margin-top: -30px;
+  }
+  .login-heading{
+    font-weight: bold;
+  }
+  /* BANNER ANIMATION */
+  svg {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+/* LOGO LOGIN */
+.logo-login{
+    font-size: 3.5em;
+}
