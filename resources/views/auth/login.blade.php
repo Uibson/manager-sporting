@@ -1210,10 +1210,10 @@
             <div class="col-md-9 col-lg-8 mx-auto">
               <h2 class="login-heading mb-4"><strong>Área de acesso</strong></h2>
               <h2 class="fs-6">
-        Ainda não tem conta?
-        <!---->
-        <!----><a class="text-decoration-none fs-6 font-color" href="{{ route('register') }}" >Clique aqui para criar uma</a><!---->
-      </h2>
+                    Ainda não tem conta?
+                    <!---->
+                    <!----><a class="text-decoration-none fs-6 font-color" href="{{ route('register') }}" >Clique aqui para criar uma</a><!---->
+                </h2>
             
               <!-- Sign In Form -->
               <form method="POST" action="{{ route('login') }}">
@@ -1258,14 +1258,15 @@
 
               </form>
             </div>
+            
           </div>
         </div>
+        
       </div>
+      
     </div>
   </div>
 </div>
-
-
 
 
 

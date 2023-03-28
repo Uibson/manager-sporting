@@ -6,3 +6,176 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+// CARD PAGE ADMIN
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,400,500,700');
+
+@mixin object($w, $h, $bg){
+  width: $w;
+  height: $h;
+  background: $bg;
+}
+
+@mixin flex_center(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.event_container{
+  display: flex;
+  @include object(100%, 230px, #FFF);
+  max-width: 750px;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.25), 0 8px 8px 0 rgba(0,0,0,.15);
+  margin: 20px 0;  
+  .event_bg{
+    @include object(40%, 100%, #333);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  .event_info{
+    @include object(60%, 100%, null);
+    padding: 10px 20px;
+    .event_title{
+      display: flex;
+      @include object(100%, 50px, null);
+      align-items: center;
+      h4{
+        font-size: 26px;
+        font-family: 'Quicksand', sans-serif;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .event_desc{
+      display: flex;
+      @include object(100%, calc(100% - 100px), null);
+      
+      p{
+        font-size: 16px;
+        font-weight: 500;
+        color: #565861;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .event_footer{
+      display: flex;
+      @include object(100%, 50px, null);
+      align-items: center;
+      justify-content: space-between;
+      .event_date p{
+        font-size: 15px;
+        font-weight: 600;
+        color: #333;
+      }
+      .event_more{
+        display: flex;
+        @include object(auto, 100%, null);
+        align-items: center;
+        
+        a.btn_more{
+          display: flex;
+          @include object(auto, 40px, null);
+          align-items: center;
+          padding: 0 15px;
+          text-decoration: none;
+          color: #5F5FFC;
+          font-size: 16px;
+          font-weight: 600;
+          border-radius: 2px;
+          will-change: background;
+          transition: background .3s, color .2s ease-in;
+          i.material-icons{
+            font-size: 18px;
+            font-weight: 500;
+            padding: 0 2px;
+          }
+          &:hover{
+            background: #5F5FFC;
+            color: #FFF;
+          }
+        }
+      }
+    }
+  }
+}
+
+// mobile screen
+@media screen and (max-width: 575px){
+  .event_container{
+    @include object(100%, 480px, #FFF);
+    flex-direction: column;
+    .event_bg{
+      @include object(100%, 250px, null);
+      min-height: 250px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 0;
+    }
+    .event_info{
+      @include object(100%, 230px, null);
+    }
+  }
+}
+//---------------------------------
+// Styling
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+	
+	.slide {
+		height: 100px;
+		width: 100%;
+	}
+}

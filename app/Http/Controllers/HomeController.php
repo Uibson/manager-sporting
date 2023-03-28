@@ -30,10 +30,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function adminHome()
-    {
-        return view('adminHome');
-    }
+    
   
     /**
      * Show the application dashboard.
