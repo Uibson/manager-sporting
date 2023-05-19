@@ -15,9 +15,9 @@
     </head>
     <body class="antialiased">
     <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Carousel</a>
+      <a class="navbar-brand" href="#">Sportshub</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,7 +27,7 @@
      
           <li class="nav-item"> 
             @auth
-            <a class="nav-link active" aria-current="page" href="{{ url('/admin/home') }}">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{ url('/admin/home') }}">Página inicial</a>
             @else
           </li>
           <li class="nav-item">
