@@ -389,5 +389,12 @@
   color: white;
 }
 
-/* IMAGE CARD  EVENT*/
+/* IMAGE LOGO  EVENT*/
 
+.logo-type{
+  width: 200px;
+  height: auto;
+}
+.negative-top{
+  margin-top: -200px;
+}

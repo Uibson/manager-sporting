@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-fluid ps-md-0 reverse-padding-main">
+<div class="container-fluid ps-md-0 reverse-padding-main ">
 <div class="row g-0">
     <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image ">
 
@@ -1192,16 +1192,14 @@
 
 
     </div>
-    <div class="col-md-8 col-lg-6"><a class="navbar-brand" href="{{ url('/') }}">
-                   <!-- <label class="logo"> {{ config('app.name', 'SportHub') }}</label> -->
-                </a>
+    <div class="col-md-8 col-lg-6 "><
       <div class="login d-flex align-items-center py-5">
-        
-        <div class="container">
+      
+        <div class="container negative-top"> 
             <div class="row">
             <div class="d-flex justify-content-center">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                   <label class="logo logo-login"> {{ config('app.name', 'SportsHub') }}</label>
+            <a class="" href="{{ url('/login') }}">
+                   <img class="logo-type " src="{{ Vite::asset('resources/img/logo.png') }}" alt="Card image cap">
                 </a>
             </div>
             </div>

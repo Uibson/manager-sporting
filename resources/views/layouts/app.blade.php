@@ -25,8 +25,10 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                   <label class="logo"> {{ config('app.name', 'SportsHub') }}</label>
+                <a class="navbar-brand" href="{{ url('/login') }}">
+                        <a class="" href="{{ url('/login') }}">
+                        <img class="logo-type " src="{{ Vite::asset('resources/img/logonome.png') }}" alt="Card image cap">
+                        </a>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
